@@ -1,0 +1,103 @@
+@font-face {
+    font-family: ArchivoBlack;
+    src: url(fonts/ArchivoBlack-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: XanhMono;
+    src: url(fonts/XanhMono-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: XanhMono;
+    src: url(fonts/XanhMono-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+html, body {
+    font-family: AcuminPro;
+    color: #222;
+    font-size: 24px;
+    margin: 0px;
+    overflow: auto;
+}
+
+html {
+  background: url(img/yuri0.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* HEADER */
+.banner {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  flex-wrap: wrap;
+  z-index: 48;
+  background: rgba(255, 255, 255, 0);
+}
+
+#title {
+  display: none;
+  font-family: ArchivoBlack;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px;
+  z-index: 52;
+  justify-content: center;
+  min-width: 375px;
+  color: red;
+  opacity: 0.7;
+  filter: blur(2.5px);
+  -webkit-filter: blur(2.5px);
+}
+
+a {
+  cursor: pointer;
+}
+
+a:visited {
+  color: blue;
+}
+
+#allSections {
+  display: block;
+  height: 100%;
+}
+
+#titleSection {
+  margin: 200px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contents {
+  margin: 100px 200px;
+}
+
+.cTitle {
+  font-family: ArchivoBlack;
+  font-weight: bold;
+  font-size: 60px;
+  color: #b3b3b3;
+  text-shadow: 0px 0px 8px #FF0000;
+  filter: drop-shadow(0rem 0rem .9rem #e23);
+}
+
+.cDesc {
+  font-family: XanhMono;
+  font-style: italic;
+  font-size: 30px;
+  color: #b3b3b3;
+  text-shadow: 0 0 8px #FF0000;
+  filter: drop-shadow(0rem 0rem .4rem #e23);
+}
