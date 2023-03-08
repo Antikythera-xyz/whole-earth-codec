@@ -218,8 +218,8 @@ h1 {
 .contents:hover {
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
- text-shadow: 0px 0px 8px #FF0000;
- filter: drop-shadow(0rem 0rem .9rem #e23);
+ text-shadow: 0px 0px 5px #EAB1CB;
+ filter: drop-shadow(0rem 0rem 0.4rem #EAB1CB);
 }
 
 .contents p {
@@ -254,8 +254,8 @@ h1 {
 .textSection h1:hover {
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
- text-shadow: 0px 0px 8px #FF0000;
- filter: drop-shadow(0rem 0rem .9rem #e23);
+  text-shadow: 0px 0px 5px #EAB1CB;
+  filter: drop-shadow(0rem 0rem 0.4rem #EAB1CB);
 }
 
 .text {
