@@ -5,7 +5,7 @@ console.log("whats up");
 
 function onScroll () {
     var scrollPosition = window.scrollY,
-        showHeaderPosition = 640;
+        showHeaderPosition = 680;
 
     console.log(scrollPosition);
     // Determine if position is at a certain point

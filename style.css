@@ -17,6 +17,85 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: Sprat;
+    src: url(fonts/Sprat-ExtendedThin.otf);
+    font-weight: lighter;
+    font-stretch: expanded;
+}
+
+@font-face {
+    font-family: Redaction;
+    src: url(fonts/Redaction-Regular.woff2);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Redaction;
+    src: url(fonts/Redaction-Bold.woff2);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Redaction;
+    src: url(fonts/Redaction-Italic.woff2);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Redaction10;
+    src: url(fonts/Redaction_10-Regular.woff2);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Redaction10;
+    src: url(fonts/Redaction_10-Bold.woff2);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Redaction10;
+    src: url(fonts/Redaction_10-Italic.woff2);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Redaction20;
+    src: url(fonts/Redaction_20-Regular.woff2);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Redaction20;
+    src: url(fonts/Redaction_20-Bold.woff2);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Redaction20;
+    src: url(fonts/Redaction_20-Italic.woff2);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Redaction35;
+    src: url(fonts/Redaction_35-Regular.woff2);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Redaction35;
+    src: url(fonts/Redaction_35-Bold.woff2);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Redaction35;
+    src: url(fonts/Redaction_35-Italic.woff2);
+    font-style: italic;
+}
+
 html, body {
     font-family: AcuminPro;
     color: #222;
@@ -26,7 +105,7 @@ html, body {
 }
 
 html {
-  background: url(img/yuri0.jpeg) no-repeat center center fixed;
+  background: url(img/yuri1.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -48,16 +127,18 @@ html {
 #title {
   display: none;
   font-family: ArchivoBlack;
-  font-size: 40px;
   font-weight: bold;
+  font-size: 40px;
   margin: 10px;
   z-index: 52;
   justify-content: center;
   min-width: 375px;
-  color: red;
-  opacity: 0.7;
+  color: #f9ed32;
+  opacity: 0.8;
   filter: blur(2.5px);
   -webkit-filter: blur(2.5px);
+  transform: scale(1.2,1);
+  -webkit-transform: scale(1.2,1);
 }
 
 a {
@@ -74,10 +155,23 @@ a:visited {
 }
 
 #titleSection {
-  margin: 200px 0px;
+  margin: 130px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.titleText {
+  font-family: ArchivoBlack;
+  font-size: 180px;
+  font-weight: bold;
+  color: #f9ed32;
+  filter: blur(7px);
+  -webkit-filter: blur(7px);
+  transform: scale(1.2,1);
+  -webkit-transform: scale(1.2,1);
+  opacity: 0.8;
+  text-align: center;
 }
 
 .contents {
@@ -85,19 +179,20 @@ a:visited {
 }
 
 .cTitle {
-  font-family: ArchivoBlack;
-  font-weight: bold;
-  font-size: 60px;
-  color: #b3b3b3;
-  text-shadow: 0px 0px 8px #FF0000;
-  filter: drop-shadow(0rem 0rem .9rem #e23);
+  font-family: Sprat;
+  font-weight: lighter;
+  font-stretch: expanded;
+  font-size: 50px;
+  color: #d3d3d3;
+  /* text-shadow: 0px 0px 8px #FF0000;
+  filter: drop-shadow(0rem 0rem .9rem #e23); */
 }
 
 .cDesc {
-  font-family: XanhMono;
+  font-family: Redaction35;
   font-style: italic;
-  font-size: 30px;
-  color: #b3b3b3;
-  text-shadow: 0 0 8px #FF0000;
-  filter: drop-shadow(0rem 0rem .4rem #e23);
+  font-size: 20px;
+  color: #d3d3d3;
+  /* text-shadow: 0 0 8px #FF0000;
+  filter: drop-shadow(0rem 0rem .4rem #e23); */
 }
