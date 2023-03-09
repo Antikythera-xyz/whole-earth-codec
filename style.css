@@ -194,6 +194,7 @@ a {
 
 #toc {
   margin: 300px 0px;
+  z-index: 10;
 }
 
 .contents {
@@ -270,20 +271,43 @@ h1 {
   font-stretch: condensed;
   font-size: 20px;
   z-index: 2;
-  margin-top: 100px;
-}
-
-#behind {
-  position: absolute;
-  margin-top: 100px;
-  right: 0px;
-  z-index: 1;
-  width: 80vw;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  left: 0;
+}
+
+.sticky {
+  position: sticky;
+  top: 10px;
+  z-index: 1;
+}
+
+#dataDiagram {
+  width: 60vw;
+}
+
+#transduction {
+  width: 70vw;
+  padding-top: 50px;
+}
+
+#codec {
+  width: 100%;
+}
+
+#clouds {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 #landscape {
