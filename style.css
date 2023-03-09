@@ -160,6 +160,7 @@ body {
 }
 
 a {
+  z-index: 50;
   cursor: pointer;
   color: inherit;
   text-decoration: inherit;
@@ -177,6 +178,20 @@ a {
   align-items: center;
 }
 
+/* Fade-In Effect */
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+}
+/* Fade-Out Effect */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+
 .titleText {
   font-family: ArchivoBlack;
   font-size: 180px;
@@ -193,8 +208,9 @@ a {
 }
 
 #toc {
+  display: block;
   margin: 300px 0px;
-  z-index: 10;
+  z-index: 50;
 }
 
 .contents {
@@ -288,6 +304,15 @@ video {
   position: sticky;
   top: 10px;
   z-index: 1;
+}
+
+#points {
+  position: fixed;
+  z-index: -5;
+  max-height: 100%;
+  width: auto;
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
 }
 
 #dataDiagram {

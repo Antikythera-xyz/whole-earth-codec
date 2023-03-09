@@ -2,13 +2,9 @@
 window.addEventListener('scroll', onHeaderScroll);
 title = document.getElementById("title");
 
-console.log("whats up");
-
 function onHeaderScroll () {
     var scrollPosition = window.scrollY,
         showHeaderPosition = 680;
-
-    console.log(scrollPosition);
     // Determine if position is at a certain point
     if (scrollPosition >= showHeaderPosition) {
         showHeader();
@@ -29,10 +25,9 @@ function hideHeader() {
 dataDiagram = document.getElementById("dataDiagram");
 data1 = document.getElementById("data1");
 data2 = document.getElementById("data2");
-var onScrollHandler = function() {
+var onDataScroll = function() {
   var newImageUrl = dataDiagram.src;
   var scrollTop = document.body.scrollTop + window.innerHeight/2;
-  console.log(scrollTop);
   if (scrollTop < data1.getBoundingClientRect().top) {
      newImageUrl = "img/Diagram1_v1.png";
   }
@@ -44,4 +39,20 @@ var onScrollHandler = function() {
   }
   dataDiagram.src = newImageUrl;
 };
-window.addEventListener("scroll", onScrollHandler);
+window.addEventListener("scroll", onDataScroll);
+
+// POINT CLOUD SCROLL
+window.addEventListener('scroll', onPointScroll);
+cloud = document.getElementById("points");
+pointsDisappear = document.getElementById("pointsDisappear");
+
+function onPointScroll () {
+    var scrollTop = document.body.scrollTop;
+
+    // Determine if position is at a certain point
+    if (scrollTop > pointsDisappear.getBoundingClientRect().top - 3*window.innerHeight/4) {
+        document.getElementById('titleSection').className = "hidden";
+    } else {
+        document.getElementById('titleSection').className = "visible";
+    }
+}
