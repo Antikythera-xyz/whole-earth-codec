@@ -117,15 +117,11 @@ html, body {
 }
 
 html {
-  /* background: url(img/yuri1.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
   scroll-behavior: smooth;
 }
 
 body {
+  height: 100%;
   background: linear-gradient(#20222D, #2D2C3C, #4E4F66, #8492B9 90%);
 }
 
@@ -329,9 +325,12 @@ video {
 }
 
 #clouds {
-  position: sticky;
-  top: 0;
-  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+#water {
+  position: relative;
   z-index: 0;
 }
 
