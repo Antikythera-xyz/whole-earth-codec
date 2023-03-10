@@ -168,7 +168,7 @@ a {
 }
 
 #titleSection {
-  margin: 30vh 0px;
+  margin: 20vh 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,6 +206,14 @@ a {
 @media only screen
   and (max-width: 500px)
 {
+
+  #titleSection {
+    margin: 30vh 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .titleText {
     font-size: 19vw;
     filter: blur(4px);
