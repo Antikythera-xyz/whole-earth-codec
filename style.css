@@ -243,6 +243,24 @@ h1 {
   display: inline;
 }
 
+h2 {
+  font-family: Sprat;
+  font-weight: lighter;
+  font-stretch: expanded;
+  font-size: 26px;
+  color: #d3d3d3;
+  margin-block-start: 100px;
+  margin-block-end: 0px;
+  z-index: 50;
+}
+
+h2:hover {
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
+ text-shadow: 0px 0px 5px #EAB1CB;
+ filter: drop-shadow(0rem 0rem 0.4rem #EAB1CB);
+}
+
 .textSection {
   margin-top: 500px;
   display: block;
@@ -250,7 +268,7 @@ h1 {
 }
 
 .textSection h1 {
-  top: 15vh;
+  top: 0;
   float: left;
   position: sticky;
   writing-mode: vertical-rl;
@@ -258,7 +276,7 @@ h1 {
   transform: rotate(180deg);
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
-  height: 650px;
+  height: 750px;
   margin-right: 50px;
   margin-left: 100px;
   z-index: 10;
