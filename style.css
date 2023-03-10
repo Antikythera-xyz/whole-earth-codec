@@ -213,7 +213,7 @@ a {
   }
 
   #title {
-    font-size: 6vw;
+    font-size: 5vw;
     filter: blur(1.5px);
     -webkit-filter: blur(1.5px);
     margin: 0px;
@@ -504,6 +504,10 @@ video {
 
   #act3 h2 {
     position: static;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
   }
 
   #caseIntro p {
