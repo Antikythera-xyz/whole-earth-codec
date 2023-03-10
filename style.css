@@ -168,7 +168,7 @@ a {
 }
 
 #titleSection {
-  margin: 120px 0px;
+  margin: 18vh 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,19 +178,19 @@ a {
 .visible {
     visibility: visible;
     opacity: 1;
-    transition: opacity 2s linear;
+    transition: opacity 1s linear;
 }
 /* Fade-Out Effect */
 .hidden {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 2s, opacity 2s linear;
+  transition: visibility 0s 1s, opacity 1s linear;
 }
 
 
 .titleText {
   font-family: ArchivoBlack;
-  font-size: 180px;
+  font-size: 20vh;
   font-weight: bold;
   color: #f9ed32;
   filter: blur(7px);
@@ -205,7 +205,7 @@ a {
 
 #toc {
   display: block;
-  margin: 300px 0px;
+  margin-top: 50vh;
   z-index: 50;
 }
 
@@ -262,13 +262,13 @@ h2:hover {
 }
 
 .textSection {
-  margin-top: 500px;
+  margin-top: 50vh;
   display: block;
   height: auto;
 }
 
 .textSection h1 {
-  top: 0;
+  top: 20vh;
   float: left;
   position: sticky;
   writing-mode: vertical-rl;
@@ -276,7 +276,7 @@ h2:hover {
   transform: rotate(180deg);
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
-  height: 750px;
+  height: 70vh;
   margin-right: 50px;
   margin-left: 100px;
   z-index: 10;
@@ -315,7 +315,7 @@ video {
 
 .sticky {
   position: sticky;
-  top: 10px;
+  top: 30vh;
   z-index: 1;
 }
 
@@ -329,7 +329,11 @@ video {
 }
 
 #dataDiagram {
-  width: 60vw;
+  width: 40vw;
+  position: fixed;
+  right: 0;
+  top: 30vh;
+  margin-right: 4vw;
 }
 
 #transduction {

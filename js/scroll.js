@@ -21,25 +21,6 @@ function hideHeader() {
   title.style.display = "none";
 }
 
-// DATA DIAGRAM SCROLL
-dataDiagram = document.getElementById("dataDiagram");
-data1 = document.getElementById("data1");
-data2 = document.getElementById("data2");
-var onDataScroll = function() {
-  var newImageUrl = dataDiagram.src;
-  var scrollTop = document.body.scrollTop + window.innerHeight/2;
-  if (scrollTop < data1.getBoundingClientRect().top) {
-     newImageUrl = "img/Diagram1_v1.png";
-  }
-  if (scrollTop > data1.getBoundingClientRect().top) {
-     newImageUrl = "img/Diagram2_v1.png";
-  }
-  if (scrollTop > data2.getBoundingClientRect().top) {
-     newImageUrl = "img/Diagram3_v1.png";
-  }
-  dataDiagram.src = newImageUrl;
-};
-window.addEventListener("scroll", onDataScroll);
 
 // POINT CLOUD SCROLL
 window.addEventListener('scroll', onPointScroll);
@@ -56,3 +37,29 @@ function onPointScroll () {
         document.getElementById('titleSection').className = "visible";
     }
 }
+
+
+// DATA DIAGRAM SCROLL
+dataDiagram = document.getElementById("dataDiagram");
+dataDisappear = document.getElementById("dataDisappear");
+data1 = document.getElementById("data1");
+data2 = document.getElementById("data2");
+var onDataScroll = function() {
+  var newImageUrl = dataDiagram.src;
+  var scrollTop = document.body.scrollTop + window.innerHeight/2;
+  if (scrollTop > pointsDisappear.getBoundingClientRect().top) {
+     newImageUrl = "img/Diagram1_v1.png";
+     dataDiagram.className = "visible";
+  }
+  if (scrollTop > data1.getBoundingClientRect().top) {
+     newImageUrl = "img/Diagram2_v1.png";
+  }
+  if (scrollTop > data2.getBoundingClientRect().top) {
+     newImageUrl = "img/Diagram3_v1.png";
+  }
+  if (scrollTop > dataDisappear.getBoundingClientRect().top || scrollTop < pointsDisappear.getBoundingClientRect().top) {
+     dataDiagram.className = "hidden";
+  }
+  dataDiagram.src = newImageUrl;
+};
+window.addEventListener("scroll", onDataScroll);
