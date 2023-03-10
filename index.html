@@ -77,10 +77,10 @@
           <p>
           We are all plugged into a limited bandwidth of a planetary ground truth of various forms of radiation, vibration, and energy, yet integrate the stimuli into a cohesive umwelt. The biosphere and technosphere must be synchronized; enter the Whole Earth Codec, an autoregressive foundation model trained across myriad planetary sensing modalities. It enables interoperability between disparate forms of data and allows an expansive planetary intelligence to emerge.
           </p>
-        <div id="codec" class="sticky">
+        <div id="codec" class="sticky visible">
           <img src="img/Diagram5_v1.png"/>
         </div>
-        <h2>Data</h2>
+        <h2 id="codecDisappear">Data</h2>
         <p>
         The Codec ingests broad spectrum data across modalities and is thus capable of synthesizing a wider understanding of the planet than any singular organism. The distributed network of the mesh observatory consists of different sensors receiving different types of stimuli: image, audio, chemical, lidar, pressure, moisture, magnetic fields, etc. What forms of data are produced are just as broad as the forms of sensing. The data stream from an individual sensor consists of measurements taken at a modality-relevant sampling rate, e.g. twenty times a second for earthquake seismometers, once every thirty minutes for common AQI sensors. The rate can also differ between sensors within the same modality, such as a microphone attuned to birdsong at 44 kHz versus one for turtles at 24 kHz. Regardless of modality, however, a UTC timestamp and GPS satellite signal is attached to each sample. This anchoring allows the model to make associations based on temporal and spatial correlation across disparate modes.
         </p>
@@ -96,7 +96,7 @@
         </div>
       </div>
       <div id="act3" class="textSection">
-        <h1>
+        <h1 id="caseDisappear">
           Act 3:<br />New Planet<br />Sensorium
         </h1>
         <div id="clouds">
@@ -104,47 +104,64 @@
             <source src="https://users.dma.ucla.edu/~dalena/WEC/clouds.webm" type="video/mp4">
           </video></div>
         <div class="text">
-        <p>
-        One of the key features of foundation models is emergence; the self-supervised model and extremely large scale of the training data makes it hard to predict exactly what the downstream capabilities may appear. This emergent nature challenges the traditional observatory model, in which scientists conduct observations in order to test specific hypotheses. What is an observatory when the object of observation cannot be known in advance? Through the assemblage of the Whole Earth Codec, secondary and tertiary modes of observation might emerge: a metagenomic sequence might tell one about land use patterns, for example. Observations are assembled rather than conducted. This final section consists of three speculative case studies. Speculation is crucial to understanding the potential benefits and risks that the Codec poses to the world, and how it may unseat assumptions of sovereignty, surveillance, and global coordination.
-        </p>
-      </div>
-          <div class="text">
-            <h2>Cloud Seeding</h2>
+          <div id="caseIntro">
+            <p>
+            One of the key features of foundation models is emergence; the self-supervised model and extremely large scale of the training data makes it hard to predict exactly what the downstream capabilities may appear. This emergent nature challenges the traditional observatory model, in which scientists conduct observations in order to test specific hypotheses. What is an observatory when the object of observation cannot be known in advance? Through the assemblage of the Whole Earth Codec, secondary and tertiary modes of observation might emerge: a metagenomic sequence might tell one about land use patterns, for example. Observations are assembled rather than conducted. This final section consists of three speculative case studies. Speculation is crucial to understanding the potential benefits and risks that the Codec poses to the world, and how it may unseat assumptions of sovereignty, surveillance, and global coordination.
+            </p>
+          </div>
+          <div id="finetuned">
+            <img id="finetunedDiagram" class="hidden" src="img/Diagram6_v1.png"/>
+          </div>
+          <div id="finetuned1" class="case">
+              <h2>Cloud<br />Seeding</h2>
             <p>
               Households in Mongolia are dependent on burning unrefined coal for heating, and thus the country has some of the worst air quality in the world. To remain under internationally mandated pollution levels, the Ministry of Environment and Tourism experiments with cloud seeding in an effort to produce rain to clear out air particles. The strategy is effective, but citizens in northern China catch wind of the program and accuse Mongolia of “stealing rainfall.”
             </p><p>
               Chinese researchers develops an extremely effective fine-tuned model from the Codec for detecting cloud seeding, trained on object detection within satellite imagery and chemical analysis of air. The model is open-sourced and picked up by a team of university researchers in Somalia. While playing around with the model, they discover that cloud seeding is also occuring in drought-stricken farmlands by rogue agricultural companies looking to increase crop yield. This leads to a proliferation of sensors in the region and further development of fine-tuned models suited todetecting weather modification.
+          </div>
+          <div id="finetuned2" class="case">
+            <h2>Forest<br />Blight</h2>
+            <div id="forest">
+              <video autoplay muted loop>
+                <source src="https://users.dma.ucla.edu/~dalena/WEC/forest.webm" type="video/mp4">
+              </video>
+            </div>
+            <p>
+              Canada has been plagued by pine beetles and their symbiotic fungi. This has an adverse impact on the country’s timber industry, as the infestation decimates monocultural forests before they reach maturity. In order to mitigate risk, insurance companies implement a proprietary fine-tuned model in order to better predict the spread of the beetle. This information is kept from landowners, who see large hikes in their insurance premiums in areas where the beetle is predicted to spread. Insurance companies monopolize risk tolerance and are reluctant to prevent the spread of the beetle as they turn a profit from corresponding premium increases.
+            </p>
+            <p>
+              Landowners learn that acoustic monitoring data, combined with other site-specific chemical measurements, can more accurately predict the spread of the beetle. Pooling their individual data, they fine-tune the Codec to produce a better model for beetle population prediction, forming a decentralized data union. Information, rather than labor power, becomes the leverage point. High-resolution predictions enable targeted eradication of the beetle infestation, improving forest health. To encourage participation in the network, differential access to the fine-tuned model is granted based on the degree of participation in the scheme. One must install sensors to increase the fidelity of the network in order to access it.
             </p>
           </div>
-        <div id="water">
-          <video autoplay muted loop>
-            <source src="https://users.dma.ucla.edu/~dalena/WEC/forest.webm" type="video/mp4">
-          </video>
-        </div>
-        <div class="text">
-          <h2>Forest Blight</h2>
-          <p>
-            Canada has been plagued by pine beetles and their symbiotic fungi. This has an adverse impact on the country’s timber industry, as the infestation decimates monocultural forests before they reach maturity. In order to mitigate risk, insurance companies implement a proprietary fine-tuned model in order to better predict the spread of the beetle. This information is kept from landowners, who see large hikes in their insurance premiums in areas where the beetle is predicted to spread. Insurance companies monopolize risk tolerance and are reluctant to prevent the spread of the beetle as they turn a profit from corresponding premium increases.
-          </p><p>
-            Landowners learn that acoustic monitoring data, combined with other site-specific chemical measurements, can more accurately predict the spread of the beetle. Pooling their individual data, they fine-tune the Codec to produce a better model for beetle population prediction, forming a decentralized data union. Information, rather than labor power, becomes the leverage point. High-resolution predictions enable targeted eradication of the beetle infestation, improving forest health. To encourage participation in the network, differential access to the fine-tuned model is granted based on the degree of participation in the scheme. One must install sensors to increase the fidelity of the network in order to access it.
-          </p>
-        </div>
-      <div class="text">
-        <h2>Gene Drive</h2>
-        <p>
-          CRISPR-Cas9 technologies have made the genetic engineering of ecosystems a possibility. Through a technique known as a gene drive, a particular suite of genes can be propagated through a population, permanently changing the genome of an entire species. There is an international moratorium on gene drives, but it is notoriously difficult to regulate. To combat this, the European Union uses the Codec to implement a large-scale nucleic acid observatory. The observatory makes use of a mesh network of water sensors, which conducts metagenomic sequencing of the surrounding watershed. Federated learning protects the sensitive genomic information from being compromised, as edge devices share only learned weights to the fine-tuned model.
-        </p><p>
-          In the United Kingdom, there is popular resistance to what is perceived as a mass surveillance system. Politicians reject the fine-tuned model in favor of a homegrown system based on nationwide data. In the EU, the program proves remarkably efficient in preventing new gene drives. The baseline metagenome of non-modified species is incorporated into the model and any modifications to this baseline are immediately detected. Meanwhile, the UK model lacks the scale necessary for its performance to meet the same benchmark, leaving the country vulnerable to gene drives.
-        </p><p>
-          An ecoterrorist group exploits this vulnerability by engineering a gene drive that modifies beef cattle in order to render their meat tough and inedible, without harming the animals themselves. This strategy proves remarkably effective in reducing meat consumption and related emissions in the UK. Despite this, modified livestock are killed, farmers are bailed out, and the UK concedes to participation in the Whole Earth Codec’s nucleic acid observatory to prevent similar events from happening again.
-        </p>
-      </div>
-        <div id="water">
-          <video autoplay muted loop>
-            <source src="https://users.dma.ucla.edu/~dalena/WEC/water.webm" type="video/mp4">
-          </video>
+          <div id="finetuned3" class="case">
+            <h2>Gene<br />Drive</h2>
+            <p>
+              CRISPR-Cas9 technologies have made the genetic engineering of ecosystems a possibility. Through a technique known as a gene drive, a particular suite of genes can be propagated through a population, permanently changing the genome of an entire species. There is an international moratorium on gene drives, but it is notoriously difficult to regulate. To combat this, the European Union uses the Codec to implement a large-scale nucleic acid observatory. The observatory makes use of a mesh network of water sensors, which conducts metagenomic sequencing of the surrounding watershed. Federated learning protects the sensitive genomic information from being compromised, as edge devices share only learned weights to the fine-tuned model.
+            </p><p>
+              In the United Kingdom, there is popular resistance to what is perceived as a mass surveillance system. Politicians reject the fine-tuned model in favor of a homegrown system based on nationwide data. In the EU, the program proves remarkably efficient in preventing new gene drives. The baseline metagenome of non-modified species is incorporated into the model and any modifications to this baseline are immediately detected. Meanwhile, the UK model lacks the scale necessary for its performance to meet the same benchmark, leaving the country vulnerable to gene drives.
+            </p>
+            <p>
+              An ecoterrorist group exploits this vulnerability by engineering a gene drive that modifies beef cattle in order to render their meat tough and inedible, without harming the animals themselves. This strategy proves remarkably effective in reducing meat consumption and related emissions in the UK. Despite this, modified livestock are killed, farmers are bailed out, and the UK concedes to participation in the Whole Earth Codec’s nucleic acid observatory to prevent similar events from happening again.
+            </p>
+          </div>
         </div>
       </div>
+        <div id="conclusion" class="textSection">
+          <div id="finetuned4" class="text">
+            <h2>Conclusion</h2>
+            <p>
+              As James C. Scott explains in Seeing Like a State, what can be seen by a state, platform, or protocol also determines what can be managed, pillaged, or profited from. While the Whole Earth Codec has been framed as a new model of the observatory, it would be remiss to think its observation passive. All three case studies exhibit a recursive dynamic: the act of observation re-discloses the biosphere as an informatic landscape, a technogeography wherein the biosphere and technosphere become productive of one another. Pine beetle management necessitates a densification of the sensing apparatus, which in turn reveals the forest as a technical object to be managed. This recursion characterizes all sensor networks.
+</p><p>
+The Whole Earth Codec complicates this dynamic by introducing an appendage for processing, integration, and newfound synthesis. Capable of universal transfer amongst data streams, the codec trades cybernetic loops for n-dimensional knots. The self-supervised, emergent nature of the foundation model complicates what it means to see, as one can never be entirely sure what lies downstream. The future trajectory of foundation models remains opaque, but if they truly represent the paradigm shift that their proponents claim, it is of paramount importance that such foundations be as representative as possible of the entire spectrum of information the planet produces about itself. Guided by planetary-scale sensing rather than myopic anthropocentrism, the Whole Earth Codec opens up a future of ambivalent possibility within high-resolution prediction and newly interoperable intelligence.
+            </p>
+          </div>
+          <div id="water">
+            <video autoplay muted loop>
+              <source src="https://users.dma.ucla.edu/~dalena/WEC/water.webm" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
   </main>
 </body>
 <script src="js/scroll.js"></script>
