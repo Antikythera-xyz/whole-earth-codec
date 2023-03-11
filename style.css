@@ -235,7 +235,7 @@ a {
 
 #toc {
   display: block;
-  margin-top: 50vh;
+  margin-top: 40vh;
   z-index: 50;
 }
 
@@ -263,6 +263,10 @@ h1 {
   h1 {
    font-size: 7vw;
   }
+
+  #toc {
+    margin-top: 30vh;
+  }
 }
 
 .contents h1 {
@@ -283,6 +287,39 @@ h1 {
   font-size: 2vh;
   color: #d3d3d3;
   display: inline;
+}
+
+#wecVid {
+  margin-top: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+iframe {
+  width: 960px;
+  height: 540px;
+}
+
+iframe:hover {
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
+ filter: drop-shadow(0rem 0rem 0.5rem #EAB1CB);
+}
+
+@media only screen
+  and (max-width: 1000px)
+{
+  #wecVid {
+    margin-top: 20vh;
+  }
+
+  iframe {
+    width: 320px;
+    height: 180px;
+  }
+
 }
 
 h2 {
