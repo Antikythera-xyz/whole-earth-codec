@@ -55,7 +55,10 @@ body {
 
 #bannerTitle {
   display: none;
-  margin: 3vh;
+  font-family: Netbus;
+  font-weight: bold;
+  font-size: 4vh;
+  margin: 10px;
   z-index: 52;
   width: 25vw;
 }
