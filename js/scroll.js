@@ -32,7 +32,7 @@ function onPointScroll () {
     var scrollTop = document.body.scrollTop;
 
     // Determine if position is at a certain point
-    if (scrollTop > pointsDisappear.getBoundingClientRect().top - 3*window.innerHeight/4) {
+    if (scrollTop > pointsDisappear.getBoundingClientRect().bottom - window.innerHeight/2) {
         document.getElementById('titleSection').className = "hidden";
     } else {
         document.getElementById('titleSection').className = "visible";
