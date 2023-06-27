@@ -1,117 +1,13 @@
 @font-face {
-    font-family: ArchivoBlack;
-    src: url(fonts/ArchivoBlack-Regular.ttf);
+    font-family: Netbus;
+    src: url(fonts/Netbus.woff);
     font-weight: normal;
-}
-
-@font-face {
-    font-family: XanhMono;
-    src: url(fonts/XanhMono-Regular.ttf);
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: XanhMono;
-    src: url(fonts/XanhMono-Italic.ttf);
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: Sprat;
-    src: url(fonts/Sprat-ExtendedThin.otf);
-    font-weight: lighter;
-    font-stretch: expanded;
-}
-
-@font-face {
-    font-family: Sprat;
-    src: url(fonts/Sprat-CondensedThin.otf);
-    font-weight: lighter;
-    font-stretch: condensed;
-}
-
-@font-face {
-    font-family: Sprat;
-    src: url(fonts/Sprat-RegularThin.otf);
-    font-weight: lighter;
-}
-
-@font-face {
-    font-family: Redaction;
-    src: url(fonts/Redaction-Regular.woff2);
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: Redaction;
-    src: url(fonts/Redaction-Bold.woff2);
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: Redaction;
-    src: url(fonts/Redaction-Italic.woff2);
-    font-style: italic;
-}
-
-@font-face {
-    font-family: Redaction10;
-    src: url(fonts/Redaction_10-Regular.woff2);
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: Redaction10;
-    src: url(fonts/Redaction_10-Bold.woff2);
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: Redaction10;
-    src: url(fonts/Redaction_10-Italic.woff2);
-    font-style: italic;
-}
-
-@font-face {
-    font-family: Redaction20;
-    src: url(fonts/Redaction_20-Regular.woff2);
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: Redaction20;
-    src: url(fonts/Redaction_20-Bold.woff2);
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: Redaction20;
-    src: url(fonts/Redaction_20-Italic.woff2);
-    font-style: italic;
-}
-
-@font-face {
-    font-family: Redaction35;
-    src: url(fonts/Redaction_35-Regular.woff2);
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: Redaction35;
-    src: url(fonts/Redaction_35-Bold.woff2);
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: Redaction35;
-    src: url(fonts/Redaction_35-Italic.woff2);
-    font-style: italic;
 }
 
 html, body {
-    font-family: Sprat;
-    color: #222;
+    font-family: Arial;
+    font-stretch: condensed;
+    color: #fff;
     font-size: 24px;
     margin: 0px;
 }
@@ -122,10 +18,8 @@ html {
 
 body {
   height: 100%;
-  /* background: linear-gradient(#20222D, #737a99 91%, #cf709a 94%, #fae084 98%, #a49892 100%); */
-  background: linear-gradient(#20222D, #737a99 91%, #d6b157 95%, #e57b40 98.5%, #fdff94);
+  background: #000;
 }
-
 
 /* HEADER */
 .banner {
@@ -141,30 +35,13 @@ body {
 
 #title {
   display: none;
-  font-family: ArchivoBlack;
+  font-family: Netbus;
   font-weight: bold;
   font-size: 4vh;
   margin: 10px;
   z-index: 52;
   justify-content: center;
   color: #f9ed32;
-  opacity: 0.8;
-  filter: blur(2.5px);
-  -webkit-filter: blur(2.5px);
-  transform: scale(1.2,1);
-  -webkit-transform: scale(1.2,1);
-}
-
-a {
-  z-index: 50;
-  cursor: pointer;
-  color: inherit;
-  text-decoration: inherit;
-}
-
-#allSections {
-  display: block;
-  height: 100%;
 }
 
 #titleSection {
@@ -174,119 +51,13 @@ a {
   align-items: center;
 }
 
-/* Fade-In Effect */
-.visible {
-    visibility: visible;
-    opacity: 1;
-    transition: all 1s ease-in;
-}
-/* Fade-Out Effect */
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 1s ease-out;
-}
-
-
 .titleText {
-  font-family: ArchivoBlack;
+  font-family: Netbus;
   font-size: 20vh;
-  font-weight: bold;
-  color: #f9ed32;
-  filter: blur(7px);
-  -webkit-filter: blur(7px);
-  transform: scale(1.2,1);
-  -webkit-transform: scale(1.2,1);
-  opacity: 0.8;
+  color: #fff;
   text-align: center;
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
-}
-
-@media only screen
-  and (max-width: 500px)
-{
-
-  #titleSection {
-    margin: 30vh 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .titleText {
-    font-size: 19vw;
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
-  }
-
-  #title {
-    font-size: 5vw;
-    filter: blur(1.5px);
-    -webkit-filter: blur(1.5px);
-    margin: 0px;
-    min-width: none;
-  }
-
-  .banner {
-    width: 100vw;
-  }
-}
-
-#toc {
-  display: block;
-  margin-top: 40vh;
-  z-index: 50;
-}
-
-.contents {
-  margin: 11vh 15vw;
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-}
-
-h1 {
-  font-family: Sprat;
-  font-weight: lighter;
-  font-stretch: expanded;
-  font-size: 6.1vh;
-  color: #d3d3d3;
-}
-
-@media only screen
-  and (max-width: 500px)
-{
-  .contents {
-    margin: 11vh 5vw;
-  }
-
-  h1 {
-   font-size: 7vw;
-  }
-
-  #toc {
-    margin-top: 30vh;
-  }
-}
-
-.contents h1 {
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-}
-
-.contents:hover {
-  transition: all .7s ease;
-  -webkit-transition: all .7s ease;
- text-shadow: 0px 0px 5px #EAB1CB;
- filter: drop-shadow(0rem 0rem 0.4rem #EAB1CB);
-}
-
-.contents p {
-  font-family: Redaction35;
-  font-style: italic;
-  font-size: 2vh;
-  color: #d3d3d3;
-  display: inline;
 }
 
 #wecVid {
@@ -305,7 +76,7 @@ iframe {
 iframe:hover {
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
- filter: drop-shadow(0rem 0rem 0.5rem #EAB1CB);
+ filter: drop-shadow(0rem 0rem 0.5rem #fff);
 }
 
 @media only screen
@@ -322,63 +93,10 @@ iframe:hover {
 
 }
 
-h2 {
-  font-family: Sprat;
-  font-weight: lighter;
-  font-stretch: expanded;
-  font-size: 3vh;
-  color: #d3d3d3;
-  margin-block-start: 10vh;
-  margin-block-end: 0px;
-  z-index: 50;
-  transition: all .7s ease;
-  -webkit-transition: all .7s ease;
-}
-
-h2:hover {
-  transition: all .7s ease;
-  -webkit-transition: all .7s ease;
- text-shadow: 0px 0px 5px #EAB1CB;
- filter: drop-shadow(0rem 0rem 0.4rem #EAB1CB);
-}
-
-@media only screen
-  and (max-width: 500px)
-{
-  h2 {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-}
-
 .textSection {
   margin-top: 50vh;
   display: block;
   height: auto;
-}
-
-.textSection h1 {
-  top: 20vh;
-  float: left;
-  position: sticky;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  transition: all .7s ease;
-  -webkit-transition: all .7s ease;
-  height: 70vh;
-  margin-right: 3vw;
-  margin-left: 6vw;
-  z-index: 10;
-}
-
-.textSection h1:hover {
-  transition: all .7s ease;
-  -webkit-transition: all .7s ease;
-  text-shadow: 0px 0px 5px #EAB1CB;
-  filter: drop-shadow(0rem 0rem 0.4rem #EAB1CB);
 }
 
 .text {
@@ -389,7 +107,7 @@ h2:hover {
 .textSection p {
   width: 42vw;
   color: #d3d3d3;
-  font-family: Sprat;
+  font-family: Arial;
   font-stretch: condensed;
   font-size: 2.4vh;
   z-index: 2;
@@ -402,17 +120,6 @@ h2:hover {
     width: 100vw;
     margin-top: 0vh;
   }
-  .textSection h1 {
-    position: relative;
-    transform: none;
-    writing-mode: unset;
-    text-orientation: unset;
-    float: none;
-    height: 30vh;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   .textSection p {
     width: 85%;
@@ -420,32 +127,6 @@ h2:hover {
     align-self: center;
   }
 }
-
-#act3 h2 {
-  margin-block-start: 0;
-  position: sticky;
-  top: 40vh;
-  text-align: right;
-  margin-right: 27vw;
-}
-
-.case {
-  margin-top: 55vh;
-  width: 55vw;
-}
-
-.case p {
-  width: 21vw;
-  position: relative;
-  margin-left: 30vw;
-}
-
-#act3 .text {
-  align-items: flex-end;
-  padding-top: 50vh;
-}
-
-
 
 img {
   max-width: 100%;
@@ -457,48 +138,28 @@ video {
   height: auto;
 }
 
-.sticky {
-  position: sticky;
-  top: 1vh;
-  z-index: 1;
+a {
+  z-index: 50;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: inherit;
 }
 
-#conclusion .text {
-  align-items: center;
+/* Fade-In Effect */
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s ease-in;
+}
+/* Fade-Out Effect */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-out;
 }
 
-#conclusion {
-  margin-bottom: 30vh;
-}
-
-#conclusion h2 {
-  text-align: left;
-  width: 42vw;
-  color: white;
-}
-
-#conclusion p {
-  color: white;
-}
-
-@media only screen
-  and (max-width: 500px)
-{
-  .case {
-    width: 100vw;
-    margin-top: 20vh;
-  }
-  .case p {
-    width: 85%;
-    position: static;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #conclusion h2 {
-    text-align: left;
-    position: static;
-  }
+.mobileHide {
+  display: none;
 }
 
 #points {
@@ -508,153 +169,4 @@ video {
   width: auto;
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
-}
-
-#dataDiagram {
-  width: 40vw;
-  position: fixed;
-  right: 0;
-  top: 30vh;
-  margin-right: 4vw;
-}
-
-#dataDiagram1 {
-  display: none;
-}
-
-#dataDiagram2 {
-  display: none;
-}
-
-#finetuned {
-  position: fixed;
-  top: -5vh;
-  left: -2vw;
-  width: 80vw;
-  transition: all .3s ease-in-out;
-}
-
-#caseIntro {
-  display: block;
-  align-self: flex-start;
-  z-index: 40;
-}
-
-@media only screen
-  and (max-width: 500px)
-{
-  #act3 .text {
-    padding-top: 1vh;
-  }
-
-  #act3 h2 {
-    position: static;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-  }
-
-  #caseIntro p {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-#transduction {
-  width: 70vw;
-  padding-top: 3vh;
-}
-
-#codec {
-  width: 95%;
-}
-
-#clouds {
-  position: absolute;
-  z-index: 0;
-  margin-top: 150vh;
-}
-
-#forest {
-  position: absolute;
-  z-index: 0;
-  width: 100vw;
-  left: 0;
-}
-
-#water {
-  position: absolute;
-  z-index: 0;
-  width: 100vw;
-  left: 0;
-  margin-top: -30vh;
-}
-
-.mobileHide {
-  display: none;
-}
-
-@media only screen
-  and (max-width: 500px)
-{
-  #dataDiagram {
-    width: 80vw;
-    position: static;
-    margin: auto;
-  }
-  #dataDiagram1 {
-    width: 80vw;
-    position: static;
-    margin: auto;
-    display: block;
-  }
-  #dataDiagram2 {
-    width: 80vw;
-    position: static;
-    margin: auto;
-    display: block;
-  }
-  #transduction {
-    width: 95vw;
-  }
-
-  #codec {
-    width: 95vw;
-  }
-
-  #finetuned {
-    display: none;
-  }
-
-  video {
-    transform:scale(3);
-  }
-
-  #clouds video {
-    transform:none;
-  }
-
-  #clouds {
-    display: inline-block; /* change the default display type to inline-block */
-    overflow-x: hidden;      /* hide the overflow */
-    width: 100vw;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #forest {
-    display: inline-block; /* change the default display type to inline-block */
-    overflow-x: hidden;      /* hide the overflow */
-    width: 100vw;
-    height: 100%;
-  }
-  #water {
-    padding-top: 30vh;
-    display: inline-block; /* change the default display type to inline-block */
-    overflow-x: hidden;      /* hide the overflow */
-    width: 100vw;
-    height: 100%;
-  }
 }
