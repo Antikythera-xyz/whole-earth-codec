@@ -186,7 +186,7 @@ a {
   position: fixed;
   z-index: -5;
   max-height: auto;
-  width: 80vw;
+  width: 55vw;
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
 }
