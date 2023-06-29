@@ -131,6 +131,15 @@ iframe {
   text-shadow:0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
 }
 
+#diagramSection {
+  margin-top: 30vh;
+}
+
+#diagram {
+  position: static;
+  width: 80%;
+}
+
 #creditSection {
   text-align: left;
   font-size: 2vh;
@@ -141,6 +150,11 @@ iframe {
   display: flex;
   flex-direction: row;
 
+}
+
+#logo {
+  margin-top: 4vh;
+  width: 60%;
 }
 
 .box {
@@ -168,6 +182,13 @@ iframe {
   #creditSection {
     width: 100vw;
   }
+}
+
+.centerimg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 img {
@@ -201,7 +222,7 @@ a:hover {
 .visible {
     visibility: visible;
     opacity: 1;
-    transition: all 1s ease-in;
+    transition: all 0.8s ease-in;
     z-index: -5;
 }
 /* Fade-Out Effect */
@@ -209,7 +230,7 @@ a:hover {
   visibility: hidden;
   opacity: 0;
   z-index: -5;
-  transition: all 1s ease-out;
+  transition: all 0.8s ease-out;
 }
 
 .mobileHide {
