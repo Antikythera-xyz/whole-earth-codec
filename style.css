@@ -122,22 +122,98 @@ iframe {
 }
 
 .textSection p {
-  width: 42vw;
+  width: 70vw;
   color: #fff;
   font-family: Arial;
   font-stretch: condensed;
-  font-size: 2.4vh;
+  font-size: 3.2vh;
   z-index: 2;
   text-shadow:0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
 }
 
 #diagramSection {
   margin-top: 30vh;
+  position: relative;
 }
 
 #diagram {
   position: static;
   width: 80%;
+}
+
+.labels {
+  position: absolute;
+  z-index: 60;
+}
+
+.hlabel {
+  font-size: 4vh;
+  left: 6vw;
+}
+
+.slabel {
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
+  text-align: center;
+  cursor: pointer;
+  font-size: 2vh;
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
+}
+
+.slabel:hover {
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
+ text-shadow: 0px 0px 5px #fff;
+ filter: drop-shadow(0rem 0rem 0.4rem #fff);
+}
+
+#sensing {
+  top: 10vw;
+}
+
+#fm {
+  top: 42vw;
+}
+
+#sensors {
+  top: 8vw;
+  right: 34vw;
+}
+
+#federation {
+  top: 24vw;
+  right: 33vw;
+}
+
+#encoders {
+  top: 44.5vw;
+  right: 48vw;
+}
+
+#latent {
+  top: 63vw;
+  right: 47vw;
+}
+
+#finetuned {
+  top: 68vw;
+  right: 12vw;
+}
+
+#decoders {
+  top: 81vw;
+  right: 47.6vw;
+}
+
+#description {
+  position: fixed;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
+  text-align: left;
+  font-size: 2.4vh;
+  width: 30vw;
+  right: 5vw;
+  bottom: 5vh;
+  display: none;
 }
 
 #creditSection {

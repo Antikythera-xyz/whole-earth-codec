@@ -6,7 +6,6 @@ function onHeaderScroll () {
     var scrollPosition = window.scrollY,
         showHeaderPosition = 600;
     // Determine if position is at a certain point
-    console.log(scrollPosition);
     if (scrollPosition >= showHeaderPosition) {
         showHeader();
     } else {
@@ -33,8 +32,11 @@ function onPointScroll () {
 
     // Determine if position is at a certain point
     if (scrollTop > pointsDisappear.getBoundingClientRect().bottom - window.innerHeight/2) {
-        document.getElementById('titleSection').className = "hidden";
+        cloud.className = "hidden";
     } else {
-        document.getElementById('titleSection').className = "visible";
+        cloud.className = "visible";
     }
 }
+
+
+// CHANGE TEXT ON HOVER
