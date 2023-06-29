@@ -185,7 +185,17 @@ a {
   cursor: pointer;
   color: inherit;
   text-decoration: inherit;
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
 }
+
+a:hover {
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
+ text-shadow: 0px 0px 5px #fff;
+ filter: drop-shadow(0rem 0rem 0.4rem #fff);
+}
+
 
 /* Fade-In Effect */
 .visible {
