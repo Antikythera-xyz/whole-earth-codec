@@ -144,6 +144,10 @@ iframe {
 .labels {
   position: absolute;
   z-index: 60;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
+    cursor: pointer;
 }
 
 .hlabel {
@@ -152,15 +156,11 @@ iframe {
 }
 
 .slabel {
-  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
   text-align: center;
-  cursor: pointer;
   font-size: 2vh;
-  transition: all .7s ease;
-  -webkit-transition: all .7s ease;
 }
 
-.slabel:hover {
+.labels:hover {
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
  text-shadow: 0px 0px 5px #fff;
@@ -171,8 +171,33 @@ iframe {
   top: 10vw;
 }
 
+#sensing:hover + .sdesc {
+  opacity: 1;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
 #fm {
   top: 42vw;
+}
+
+#fm:hover + .sdesc {
+  opacity: 1;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
+.sdesc {
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  opacity: 0;
+  width: 35vw;
+  font-size: 3.2vh;
+  text-shadow:0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
+  z-index: 100;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
 }
 
 #sensors {
@@ -180,9 +205,32 @@ iframe {
   right: 34vw;
 }
 
+#sensors:hover + .sdesc {
+  opacity: 1;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
 #federation {
   top: 24vw;
-  right: 33vw;
+  right: 35vw;
+}
+
+#federation:hover + .sdesc {
+  opacity: 1;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
+#anchoring {
+  top: 32vw;
+  right: 29vw;
+}
+
+#anchoring:hover + .sdesc {
+  opacity: 1;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
 }
 
 #encoders {
@@ -190,9 +238,21 @@ iframe {
   right: 48vw;
 }
 
+#encoders:hover + .sdesc {
+  opacity: 1;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
 #latent {
   top: 63vw;
   right: 47vw;
+}
+
+#latent:hover + .sdesc {
+  opacity: 1;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
 }
 
 #finetuned {
@@ -200,20 +260,21 @@ iframe {
   right: 12vw;
 }
 
+#finetuned:hover + .sdesc {
+  opacity: 1;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
 #decoders {
   top: 81vw;
   right: 47.6vw;
 }
 
-#description {
-  position: fixed;
-  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
-  text-align: left;
-  font-size: 2.4vh;
-  width: 30vw;
-  right: 5vw;
-  bottom: 5vh;
-  display: none;
+#decoders:hover + .sdesc {
+  opacity: 1;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
 }
 
 #creditSection {
