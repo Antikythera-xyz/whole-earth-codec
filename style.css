@@ -378,8 +378,8 @@ a:hover {
   position: fixed;
   z-index: -5;
   max-height: auto;
-  width: 55vw;
-  margin-left: 28px;
+  width: 90vw;
+  margin-left: 2vw;
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
 }
