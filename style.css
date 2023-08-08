@@ -379,6 +379,7 @@ a:hover {
   z-index: -5;
   max-height: auto;
   width: 90vw;
+  margin-top: 2vh;
   margin-left: 2vw;
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
