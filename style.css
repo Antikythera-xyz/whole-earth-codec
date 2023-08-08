@@ -60,6 +60,7 @@ body {
   margin: 10px;
   z-index: 52;
   width: 25vw;
+  opacity: 0;
   transition: all 0.2s ease-out;
 }
 
