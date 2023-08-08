@@ -54,14 +54,13 @@ body {
 }
 
 #bannerTitle {
-  display: none;
   font-family: Netbus;
   font-weight: bold;
   font-size: 4vh;
   margin: 10px;
   z-index: 52;
   width: 25vw;
-  transition: all 1s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 #titleSection {
@@ -76,7 +75,7 @@ body {
 }
 
 #wecVid {
-  margin: 40vh 0;
+  margin: 20vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,7 +124,7 @@ iframe {
   text-align: center;
   text-transform: uppercase;
   font-size: 7vh;
-  font-family: 'Netbus';
+  font-family: Arial;
   font-stretch: condensed;
   text-shadow:0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
   font-weight: normal;
@@ -144,6 +143,7 @@ iframe {
 
 #diagramSection {
   margin-top: 10vh;
+  margin-bottom: 40vh;
   position: relative;
 }
 
@@ -158,7 +158,7 @@ iframe {
   text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
   transition: all .7s ease;
   -webkit-transition: all .7s ease;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .hlabel {

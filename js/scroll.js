@@ -14,11 +14,11 @@ function onHeaderScroll () {
 }
 
 function showHeader() {
-  title.style.display = "block";
+  title.style.opacity = "1";
 }
 
 function hideHeader() {
-  title.style.display = "none";
+  title.style.opacity = "0";
 }
 
 
