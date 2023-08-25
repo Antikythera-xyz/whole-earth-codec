@@ -122,6 +122,10 @@ highlightElements.forEach(btn => {
     // If the screen is small, only one modal is permitted to be opened at once.
     if (window.innerWidth < 1024) {
       closeAllModals();
+      const circleElements = document.querySelectorAll('.mbtn');
+      circleElements.forEach(c => {
+        c.style.display = "block";
+      });
     }
 
     // Open the modal and hide the button.
