@@ -1,42 +1,39 @@
 // HEADER SCROLL
-window.addEventListener('scroll', onHeaderScroll);
-title = document.getElementById("bannerTitle");
+let lastScrollTop = 0;
+const banner = document.getElementById("banner");
+let timeout;
 
-function onHeaderScroll () {
-    var scrollPosition = window.scrollY,
-        showHeaderPosition = 600;
-    // Determine if position is at a certain point
-    if (scrollPosition >= showHeaderPosition) {
-        showHeader();
-    } else {
-        hideHeader();
-    }
-}
+window.addEventListener("scroll", function() {
+  clearTimeout(timeout); // Clear previous timeout
+  var scrollPosition = window.scrollY;
+  var showHeaderPosition = 560;
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-function showHeader() {
-  title.style.opacity = "1";
-}
+  if (scrollTop < lastScrollTop && scrollPosition > showHeaderPosition) {
+    banner.className = "visible";
+  } else {
+    banner.className = "hidden";
+  }
+  lastScrollTop = scrollTop;
 
-function hideHeader() {
-  title.style.opacity = "0";
-}
-
+  // Set a timeout to hide the element after a delay
+    timeout = setTimeout(() => {
+      banner.className = "hidden";
+    }, 500); // Adjust the delay (in milliseconds) as needed
+});
 
 // DISSOLVE EARTH SCROLL
-window.addEventListener('scroll', onPointScroll);
-cloud = document.getElementById("points");
+window.addEventListener('scroll', onDissolveClipScroll);
+dissolveClip = document.getElementById("dissolveClip");
 pointsDisappear = document.getElementById("pointsDisappear");
 
-function onPointScroll () {
+function onDissolveClipScroll () {
     var scrollTop = document.body.scrollTop;
 
     // Determine if position is at a certain point
     if (scrollTop > pointsDisappear.getBoundingClientRect().bottom - window.innerHeight/2) {
-        cloud.className = "hidden";
+        dissolveClip.className = "hidden";
     } else {
-        cloud.className = "visible";
+        dissolveClip.className = "visible";
     }
 }
-
-
-// CHANGE TEXT ON HOVER
