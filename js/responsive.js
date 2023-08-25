@@ -1,3 +1,5 @@
+// Depending on the page width, show either dots or text labels to indicate
+// diagram highlights.
 function checkViewportWidth() {
   const labelElements = document.querySelectorAll('.label');
   if (window.innerWidth >= 1024) {
@@ -18,6 +20,8 @@ function checkViewportWidth() {
   }
 }
 
+// Showing all highlights requires extra logic as they shouldn't be shown
+// if the modal is still open.
 function showIfModalClosed(className) {
   const elems = document.querySelectorAll(".highlight");
   elems.forEach(btn => {
@@ -30,8 +34,8 @@ function showIfModalClosed(className) {
   });
 }
 
-// Initial check when the page loads
+// Initial check when the page loads.
 checkViewportWidth();
 
-// Listen for the resize event and update the logic
+// Listen for the resize event and update the logic.
 window.addEventListener("resize", checkViewportWidth);

@@ -3,6 +3,8 @@ let lastScrollTop = 0;
 const banner = document.getElementById("banner");
 let timeout;
 
+// The header banner appears when scrolling up, for half a second before fading.
+// It won't appear if we can see the splash landing logo.
 window.addEventListener("scroll", function() {
   clearTimeout(timeout); // Clear previous timeout
   var scrollPosition = window.scrollY;
@@ -23,6 +25,7 @@ window.addEventListener("scroll", function() {
 });
 
 // DISSOLVE EARTH SCROLL
+// After scrolling past a certain point, the background earth will disappear.
 window.addEventListener('scroll', onDissolveClipScroll);
 dissolveClip = document.getElementById("dissolveClip");
 pointsDisappear = document.getElementById("pointsDisappear");
