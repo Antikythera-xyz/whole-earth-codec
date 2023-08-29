@@ -441,8 +441,8 @@ p > a {
     top: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 0 0 0.2rem #000, 0 0 0.5rem #000;
-    -webkit-animation: blur 1.4s ease-in-out infinite alternate;
-    animation: blur 1.4s ease-in-out infinite alternate;
+    -webkit-animation: flickerGlow 1s ease-in-out infinite alternate;
+    animation: flickerGlow 1s ease-in-out infinite alternate;
   }
 
   @-webkit-keyframes glow {
@@ -454,12 +454,12 @@ p > a {
     }
   }
 
-  @-webkit-keyframes blur {
+  @-webkit-keyframes flickerGlow {
     from {
-      filter: none;
+      text-shadow: 0 0 0.2rem #000, 0 0 0.5rem #000;
     }
     to {
-      filter: blur(0.1rem);
+      text-shadow: 0 0 0.5rem #fff, 0 0 0.8rem #fff;
     }
   }
 
