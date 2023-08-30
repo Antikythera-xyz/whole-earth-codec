@@ -4,25 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <title>Whole Earth Codec</title>
+  <meta name="description" content="The Whole Earth Codec is a foundation model that transforms planetary-scale, multi-modal ecological data into a single knowledge architecture." />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_16.png">
+  <meta name="theme-color" content="#000000">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <div class="banner">
-      <img id="bannerTitle" src="titles/1line-white.svg" />
+    <div id="banner" class="hidden">
+      <img src="titles/1line-white.svg" />
     </div>
   </header>
   <main>
-    <div id="allSections">
-      <div id="titleSection" class="visible">
-        <video id="points" autoplay muted loop>
-          <source src="https://media.githubusercontent.com/media/Antikythera-xyz/whole-earth-codec/main/videos/dissolve.webm" type="video/mp4">
-        </video>
+    <div id="allSections" class="flexCenter">
+      <div id="titleSection" class="flexCenter fullWidth">
         <img src="titles/2line-white.svg"/>
+        <video id="dissolveClip" class="visible" poster="img/dissolve.png" autoplay muted loop>
+          <source src="videos/dissolve.mp4" type="video/mp4">
+          <source src="videos/dissolve.webm" type="video/webm">
+        </video>
       </div>
-      <div class="textSection" id="pointsDisappear">
+      <div class="textSection fullWidth">
+        <h1>
+          The Whole Earth Codec is a foundation model that transforms planetary-scale, multi-modal ecological data into a single knowledge architecture
+        </h1>
+      </div>
+      <div id="wecVid">
+        <iframe src="https://player.vimeo.com/video/840565197?h=8459b67c3d" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+      </div>
+      <div class="textSection fullWidth" id="pointsDisappear">
         <p>
           Traditional models of the observatory have focused on gazing outward, towards the cosmos. The recent proliferation of planetary sensor networks has inverted this gaze, forming a new kind of planetary observatory that takes the earth itself as its object. Could we cast the entire earth as a distributed observatory, using a foundation model to compose a singular, synthetic representation of the planet? The current generation of models primarily deal with human language, their training corpus scraped from the detritus of the internet. We must widen the aperture of what these models observe to include the nonnhuman.
         </p>
@@ -33,84 +48,246 @@
           <a href="./WholeEarthCodec_290623.pdf" target="blank">Read →</a>
         </p>
       </div>
-      <div id="diagramSection">
-        <div class="centerimg">
-          <img id="diagram" src="img/diagram_transparent.png" />
+      <div id="diagramSection" class="flexCenter">
+        <img src="img/diagram_transparent.png" />
+        <div id="sensing" class="highlight">
+          <div class="mbtn"></div>
+          <div class="label hlabel">
+            Sensing Layer
+          </div>
         </div>
-        <div id="sensing" class="labels hlabel">Sensing Layer</div><div class="sdesc">The sensing layer is where the multi-modal data of the biosphere is transduced, recorded, and digitized. Its topology is a distributed mesh network containing federated edge devices and regional data centers. </div>
-        <div id="fm" class="labels hlabel">Foundation Model</div><div class="sdesc">Unlike a digital twin, which constructs a mimetic representation of its subject, the Codec uses computational abstractions to access information about the planet that cannot be directly perceived. These abstractions are produced by aggregating sense data within a shared knowledge architecture: the foundation model. </div>
-        <div id="sensors" class="labels slabel">Sensors</div><div class="sdesc">
-          Each edge device might consist of different sensors receiving different types of stimuli: image, audio, chemical, lidar, pressure, moisture, magnetic fields. Forms of data produced are just as broad as the forms of sensing.
+        <div class="modal">
+          <div class="modalBox">
+            <h2 class="gridItem">Sensing Layer</h2>
+            <div class="close gridItem">
+              X
+            </div>
+            <p class="gridItem">
+              The sensing layer is where the multi-modal data of the biosphere is transduced, recorded, and digitized. Its topology is a distributed mesh network containing federated edge devices and regional data centers.
+            </p>
+          </div>
         </div>
-        <div id="federation" class="labels slabel">Federation</div><div class="sdesc">
-          Despite processing vast amounts of data, sensitive information is protected through structured transparency. Because of federated learning, the data never leaves the device. Instead, learned weights are pushed to regional data centers.</div>
-        <div id="anchoring" class="labels slabel">Spatiotemporal Anchoring</div><div class="sdesc">
-           Regardless of modality, a UTC timestamp and GPS satellite signal is attached to each sample. This anchoring allows the model to make associations based on temporal and spatial correlation across modalities.
+
+        <div id="fm" class="highlight">
+          <div class="mbtn"></div>
+          <div class="label hlabel">
+            Foundation Model
+          </div>
         </div>
-        <div id="encoders" class="labels slabel">Encoders</div><div class="sdesc">
-          Foundation models are pre-trained on a massive corpus of unsupervised data, and the Whole Earth Codec is no different. Separate encoders are trained for each type of data. These encoders transform disparate, multi-modal forms of input into dense, high-dimensional embeddings within a single cross-modal latent space. 
+        <div class="modal">
+          <div class="modalBox">
+            <h2 class="gridItem">Foundation Model</h2>
+            <div class="close gridItem">
+              X
+            </div>
+            <p class="gridItem">
+              Unlike a digital twin, which constructs a mimetic representation of its subject, the Codec uses computational abstractions to access information about the planet that cannot be directly perceived. These abstractions are produced by aggregating sense data within a shared knowledge architecture: the foundation model. 
+            </p>
+          </div>
         </div>
-        <div id="latent" class="labels slabel">Latent Space</div><div class="sdesc">
-          Through contrastive learning, the model projects temporally and spatially correlated data into nearby embeddings within the space. The latent space folds and refolds, forming a composite topology of the biosphere.
+
+        <div id="sensors" class="highlight">
+          <div class="mbtn"></div>
+          <div class="label slabel">
+            Sensors
+          </div>
         </div>
-        <div id="finetuned" class="labels slabel">Fine-Tuned Models</div><div class="sdesc">
-          Leveraging the pre-trained baseline, fine-tuning uses a smaller, labeled dataset to update model weights, often for specific capabilities or to address domain shift. The Codec forms the substrate for a rich ecosystem of third-party, fine-tuned models with improved performance on downstream tasks. 
+        <div class="modal">
+          <div class="modalBox">
+            <h2 class="gridItem">Sensors</h2>
+            <div class="close gridItem">
+              X
+            </div>
+            <p class="gridItem">
+              Each edge device might consist of different sensors receiving different types of stimuli: image, audio, chemical, lidar, pressure, moisture, magnetic fields. Forms of data produced are just as broad as the forms of sensing.
+            </p>
+          </div>
         </div>
-        <div id="decoders" class="labels slabel">Decoders</div><div class="sdesc">
-          Decoders of different modalities are then trained by translating the embeddings into sequence predictions. Due to the massive scale of input, the model only makes a single pass over available data.
+
+        <div id="federation" class="highlight">
+          <div class="mbtn"></div>
+          <div class="label slabel">
+            Federation
+          </div>
+        </div>
+        <div class="modal">
+          <div class="modalBox">
+            <h2 class="gridItem">Federation</h2>
+            <div class="close gridItem">
+              X
+            </div>
+            <p class="gridItem">
+              Despite processing vast amounts of data, sensitive information is protected through structured transparency. Because of federated learning, the data never leaves the device. Instead, learned weights are pushed to regional data centers.
+            </p>
+          </div>
+        </div>
+
+        <div id="anchoring" class="highlight">
+          <div class="mbtn"></div>
+          <div class="label slabel">
+            Spatiotemporal Anchoring
+          </div>
+        </div>
+        <div class="modal">
+          <div class="modalBox">
+            <h2 class="gridItem">Spatiotemporal Anchoring</h2>
+            <div class="close gridItem">
+              X
+            </div>
+            <p class="gridItem">
+              Regardless of modality, a UTC timestamp and GPS satellite signal is attached to each sample. This anchoring allows the model to make associations based on temporal and spatial correlation across modalities.
+           </p>
+          </div>
+        </div>
+
+        <div id="encoders" class="highlight">
+          <div class="mbtn"></div>
+          <div class="label slabel">
+            Encoders
+          </div>
+        </div>
+        <div class="modal">
+          <div class="modalBox">
+            <h2 class="gridItem">Encoders</h2>
+            <div class="close gridItem">
+              X
+            </div>
+            <p class="gridItem">
+              Foundation models are pre-trained on a massive corpus of unsupervised data, and the Whole Earth Codec is no different. Separate encoders are trained for each type of data. These encoders transform disparate, multi-modal forms of input into dense, high-dimensional embeddings within a single cross-modal latent space. 
+            </p>
+          </div>
+        </div>
+
+        <div id="latent" class="highlight">
+          <div class="mbtn"></div>
+          <div class="label slabel">
+            Latent Space
+          </div>
+        </div>
+        <div class="modal">
+          <div class="modalBox">
+            <h2 class="gridItem">Latent Space</h2>
+            <div class="close gridItem">
+              X
+            </div>
+            <p class="gridItem">
+              Through contrastive learning, the model projects temporally and spatially correlated data into nearby embeddings within the space. The latent space folds and refolds, forming a composite topology of the biosphere.
+            </p>
+          </div>
+        </div>
+
+        <div id="finetuned" class="highlight">
+          <div class="mbtn"></div>
+          <div class="label slabel">
+            Fine-Tuned Models
+          </div>
+        </div>
+        <div class="modal">
+          <div class="modalBox">
+            <h2 class="gridItem">Fine-Tuned Models</h2>
+            <div class="close gridItem">
+              X
+            </div>
+            <p class="gridItem">
+              Leveraging the pre-trained baseline, fine-tuning uses a smaller, labeled dataset to update model weights, often for specific capabilities or to address domain shift. The Codec forms the substrate for a rich ecosystem of third-party, fine-tuned models with improved performance on downstream tasks. 
+            </p>
+          </div>
+        </div>
+
+        <div id="decoders" class="highlight">
+          <div class="mbtn"></div>
+          <div class="label slabel">
+            Decoders
+          </div>
+        </div>
+        <div class="modal">
+          <div class="modalBox">
+            <h2 class="gridItem">Decoders</h2>
+            <div class="close gridItem">
+              X
+            </div>
+            <p class="gridItem">
+              Decoders of different modalities are then trained by translating the embeddings into sequence predictions. Due to the massive scale of input, the model only makes a single pass over available data.
+            </p>
+          </div>
         </div>
       </div>
-      <div id="wecVid">
-        <iframe src="https://player.vimeo.com/video/840565197?badge=0&autopause=0&player_id=0&app_id=58479/embed" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div id="creditSection">
-        <div id="credits">
+
+      <div id="creditSection" class="fullWidth">
+        <div class="column">
           <div class="box">
             <b>Studio Researchers</b><br />
             Connor Cook<br />
             <a href="https://christina.lu">Christina Lu</a><br />
-            <a href="https://christina.lu">Dalena Tran</a><br />
+            Dalena Tran<br />
           </div>
           <div class="box">
-            <b>Program Director</b><br />
-            Benjamin Bratton<br /><br />
-            <b>Studio Director</b><br />
-            Nicolay Boyadjiev<br /><br />
-            <b>Associate Director</b><br />
-            Stephanie Sherman<br />
+            <p>
+              <b>Program Director</b><br />
+              Benjamin Bratton
+            </p>
+            <p>
+              <b>Studio Director</b><br />
+              Nicolay Boyadjiev
+            </p>
+            <p>
+              <b>Associate Director</b><br />
+              Stephanie Sherman
+            </p>
           </div>
           <div class="box">
-            <b>Senior Program Manager</b><br />
-            Emily Knapp<br /><br />
-            <b>Network Operatives</b><br />
-            Dasha Silkina<br />
-            Andrew Karabanov<br /><br />
-            <b>Art Direction</b><br />
-            Case Miller<br /><br />
-          </div>
-          <div class="box">
-            <b>Sound Design</b><br />
-            Błażej Kotowski<br /><br />
-            <b>Graphic Design</b><br />
-            Callum Dean<br /><br />
-            <b>Voiceover Engineer</b><br />
-            Sam Horn<br /><br />
-            <b>Editor</b><br />
-            Guy Mackinnon-Little<br />
-          </div>
-          <div class="box">Thanks to The Berggruen Institute and One Project for their support for the inaugural year of Antikythera.
-            <br /><br />
-              Special thanks to Nicolas Berggruen, Nils Gilman, Dawn Nakagawa, Justin Rosenstein, and Raphael Arar for their visionary support and participation.
-              <br />
-              <a href="https://antikythera.org"><img id="logo" src="img/antikythera.svg" /></a>
+            <p>
+              <b>Senior Program Manager</b><br />
+              Emily Knapp
+            </p>
+            <p>
+              <b>Network Operatives</b><br />
+              Dasha Silkina<br />
+              Andrew Karabanov
+            </p>
+            <p>
+              <b>Art Direction</b><br />
+              Case Miller
+            </p>
           </div>
         </div>
-        <p class="email">
-          <span>Press and inquiries → contact</span><span style="display:none;">no scraping</span><span>@</span><span>codec.earth</span>
-        </p>
+        <div class="column">
+          <div class="box">
+            <p>
+              <b>Sound Design</b><br />
+              Błażej Kotowski
+            </p>
+            <p>
+              <b>Graphic Design</b><br />
+              Callum Dean
+            </p>
+            <p>
+              <b>Voiceover Engineer</b><br />
+              Sam Horn
+            </p>
+            <p>
+              <b>Editor</b><br />
+              Guy Mackinnon-Little
+            </p>
+          </div>
+          <div id="thanks" class="box">
+            <p>
+              Thanks to The Berggruen Institute and One Project for their support for the inaugural year of Antikythera.
+            </p>
+            <p>
+              Special thanks to Nicolas Berggruen, Nils Gilman, Dawn Nakagawa, Justin Rosenstein, and Raphael Arar for their visionary support and participation.
+            </p>
+            <a href="https://antikythera.org"><img src="img/antikythera.svg" /></a>
+          </div>
+        </div>
+      </div>
+      <div id="email" class="fullWidth">
+        <span>Press and inquiries → <u>contact</u></span><span style="display:none;">no scraping</span><u><span>@</span><span>codec.earth</span></u>
       </div>
     </div>
   </main>
 </body>
+<script src="js/modal.js"></script>
 <script src="js/scroll.js"></script>
+<script src="js/responsive.js"></script>
 </html>
