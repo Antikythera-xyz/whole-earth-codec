@@ -1,32 +1,32 @@
 @font-face {
   font-family: Arial;
-  src: url(fonts/Arial.ttf);
+  src: url(../fonts/Arial.TTF);
   font-weight: normal;
 }
 
 @font-face {
   font-family: Netbus;
-  src: url(fonts/Netbus);
+  src: url(../fonts/Netbus.woff);
   font-weight: normal;
 }
 
 @font-face {
   font-family: Arial Narrow;
-  src: url(fonts/ArialNarrow.ttf);
+  src: url(../fonts/ArialNarrow.ttf);
   font-stretch: condensed;
   font-weight: normal;
 }
 
 @font-face {
   font-family: Arial Narrow Bold;
-  src: url(fonts/ArialNarrow-Bold.ttf);
+  src: url(../fonts/ArialNarrow-Bold.ttf);
   font-stretch: condensed;
   font-weight: bold;
 }
 
 @font-face {
   font-family: Arial Narrow Italic;
-  src: url(fonts/ArialNarrow-Italic.ttf);
+  src: url(../fonts/ArrialNarrow-Italic.ttf);
   font-stretch: condensed;
   font-style: italic;
 }
