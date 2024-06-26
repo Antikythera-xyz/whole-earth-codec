@@ -379,6 +379,7 @@ p > a {
   left: 0;
   position: fixed;
   backdrop-filter: blur(0.1rem);
+  -webkit-backdrop-filter: blur(0.1rem);
 }
 
 .csBox {
