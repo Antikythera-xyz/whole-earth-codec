@@ -7,7 +7,7 @@ const desktopSrcs = ["img/1infra.gif", "img/2info.gif", "img/3resourcing.gif", "
 // diagram highlights.
 function checkViewportWidth() {
   setCollapsibleHeight();
-
+  
   const labelElements = document.querySelectorAll('.label');
   if (window.innerWidth >= 1024) {
     // Hide all diagram circles.
@@ -77,3 +77,4 @@ checkViewportWidth();
 
 // Listen for the resize event and update the logic.
 window.addEventListener("resize", checkViewportWidth);
+

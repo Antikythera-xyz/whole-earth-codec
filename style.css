@@ -45,18 +45,27 @@
 }
 
 html, body {
-    font-family: Arial;
-    font-stretch: condensed;
-    font-weight: normal;
-    color: #fff;
-    font-size: 24px;
-    margin: 0px;
-    width: 100vw;
-    overflow-x: hidden;
+
+  font-family: Arial;
+  font-stretch: condensed;
+  font-weight: normal;
+  color: #fff;
+  font-size: 24px;
+  margin: 0px;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
   background: #000;
+}
+
+.no-scroll {
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overflow: hidden;
+  overscroll-behavior: none;
+  position: fixed;
 }
 
 img {
@@ -137,10 +146,6 @@ ul {
   width: 96vw;
   max-width: none;
   margin-left: -3vw;
-}
-
-video {
-  pointer-events: none;
 }
 
 /* FLOATING TITLE BANNER */
@@ -276,7 +281,7 @@ p > a {
 }
 
 /* CASE STUDIES */
-.pButton {
+.cbtn {
   display: inline-block;
   width: 0.5rem;
   height: 0.5rem;
@@ -355,6 +360,7 @@ p > a {
   width: 90%;
   max-width: 16rem;
   height: auto;
+  max-height: 90%;
   display: grid;
   grid-template-columns: 9fr 1fr;
   border: solid 1px white;
@@ -363,18 +369,60 @@ p > a {
   pointer-events: all;
 }
 
+.cs {
+  display: none;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  backdrop-filter: blur(0.1rem);
+}
+
+.csBox {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 90%;
+  max-width: 16rem;
+  height: auto;
+  max-height: 90%;
+  display: grid;
+  overflow-y: auto;
+  grid-template-columns: 9fr 1fr;
+  border: solid 1px white;
+  grid-gap: 0;
+  margin: 0 auto;
+  pointer-events: all;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+.scrollable {
+  height: auto;
+  overflow-y: auto;
+}
+
 .gridItem {
   font-size: 0.7rem;
   margin: 0;
   padding: 0.45rem;
 }
 
-.modalBox > p {
+.gridItem > p {
+  font-size: 0.7rem;
+  margin-block-start: 0.45em;
+  margin-block-end: 0.45em;
+}
+
+.modalBox > p, .csBox > .scrollable {
   grid-column: 1/3;
   border-top: solid 1px white;
 }
 
-.modalBox > h2 {
+.modalBox > h2, .csBox > h2 {
   border-right: solid 1px white;
 }
 
@@ -493,7 +541,7 @@ p > a {
     width: 48vw;
   }
 
-  .modalBox {
+  .modalBox{
     width: 99%;
   }
 
@@ -596,11 +644,11 @@ p > a {
   }
 
 
-  .modalBox > h2, .close {
+  .modalBox > h2, .csBox > h2, .close {
     font-size: 1.8vw;
   }
 
-  .modalBox > p {
+  .modalBox > p, .csBox > .scrollable {
     font-size: 1.3vw;
   }
 
@@ -700,11 +748,11 @@ p > a {
     width: 16rem;
   }
 
-  .modalBox > h2, .close {
+  .modalBox > h2, .close, .csBox > h2 {
     font-size: 1rem;
   }
 
-  .modalBox > p {
+  .modalBox > p, .csBox > .scrollable {
     font-size: 0.8rem;
   }
 
