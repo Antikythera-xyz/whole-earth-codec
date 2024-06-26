@@ -139,6 +139,10 @@ ul {
   margin-left: -3vw;
 }
 
+video {
+  pointer-events: none;
+}
+
 /* FLOATING TITLE BANNER */
 #banner {
   display: flex;
