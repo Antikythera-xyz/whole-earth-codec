@@ -9,7 +9,7 @@ window.addEventListener("scroll", function() {
   clearTimeout(timeout); // Clear previous timeout
   var scrollPosition = window.scrollY;
   var showHeaderPosition = 560;
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollTop = document.documentElement.scrollTop;
 
   if (scrollTop < lastScrollTop && scrollPosition > showHeaderPosition) {
     banner.className = "visible";

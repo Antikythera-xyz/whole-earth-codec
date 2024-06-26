@@ -104,6 +104,39 @@ a:hover {
   width: 90%;
 }
 
+h3 {
+  font-family: Netbus;
+  margin-top: 3rem;
+}
+
+h4 {
+  font-family: Netbus;
+}
+
+::selection {
+  background: #0014CC;
+  color: #ffffff;      
+  text-shadow: none; 
+}
+
+.indent {
+  padding-left: 2rem;
+}
+
+.listIndent {
+  margin-left: 3rem;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.wideImg {
+  width: 96vw;
+  max-width: none;
+  margin-left: -3vw;
+}
+
 /* FLOATING TITLE BANNER */
 #banner {
   display: flex;
@@ -171,10 +204,98 @@ p {
   text-shadow: 0 0 0.2rem #000, 0 0 0.5rem #000;
 }
 
+li {
+  font-size: 0.9rem;
+}
+
 p > a {
   text-decoration: underline;
   text-shadow: none;
 }
+
+/* COLLAPSIBLE LOGICSS */
+.collapsible {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 1.4rem;
+  border: none;
+  font-family: Netbus;
+}
+
+#bPhase2, #phase2 {
+  background-color: #808080;
+  color: black;
+}
+
+#phase2 ::selection {
+  background: #ff0000;
+  color: #000000;      
+  text-shadow: none; 
+}
+
+#bPhase3, #phase3 {
+  background-color: #0014CC;
+  color: white;
+}
+
+#phase3 ::selection {
+  background: #ffffff;
+  color: #0014CC;      
+  text-shadow: none; 
+}
+
+.cIcon {
+  float: right;
+  font-family: "Playfair Display", serif;
+}
+
+.expand {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.expand p {
+  text-shadow: none;
+}
+
+.cContent {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+/* CASE STUDIES */
+.pButton {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: red; /* Choose your button color */
+  text-align: center;
+  border-radius: 50%; /* Makes the button round */
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0 0 rgba(255,255,255, 0.5); /* Initial state of the glow */
+  animation: pulse 2s infinite;
+  margin: 0 0.3rem;
+}
+
+@keyframes pulse {
+  0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  70% {
+      box-shadow: 0 0 0 0.5rem rgba(255, 255, 255, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
 
 /* WEC DIAGRAM */
 #diagramSection {
@@ -192,13 +313,14 @@ p > a {
 }
 
 .mbtn {
-  width: 3vw;
-  height: 3vw;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   background-color: #fff;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
 }
 
 .label {
@@ -211,7 +333,7 @@ p > a {
 
 /* DIAGRAM MODAL */
 .modal {
-  display: none;
+  display: block;
   position: absolute;
   z-index: 30;
   left: 0;
@@ -347,7 +469,7 @@ p > a {
     font-size: 1.7rem;
   }
 
-  p {
+  p, li {
     font-size: 1rem;
   }
 
@@ -388,6 +510,10 @@ p > a {
     width: 70%;
   }
 
+  .wideImg {
+    margin-left: -19%;
+  }
+
   #banner {
     justify-content: flex-start;
     background-image: linear-gradient(black 50%, rgba(0, 0, 0, 0) 100%);
@@ -412,7 +538,7 @@ p > a {
     font-size: 3.5vw;
   }
 
-  p {
+  p, li {
     font-size: 1.8vw;
   }
 
@@ -445,7 +571,7 @@ p > a {
     animation: flickerGlow 1s ease-in-out infinite alternate;
   }
 
-  @-webkit-keyframes glow {
+  @keyframes glow {
     from {
       text-shadow: 0 0 0.2rem #000, 0 0 0.5rem #000;
     }
@@ -454,7 +580,7 @@ p > a {
     }
   }
 
-  @-webkit-keyframes flickerGlow {
+  @keyframes flickerGlow {
     from {
       text-shadow: 0 0 0.2rem #000, 0 0 0.5rem #000;
     }
@@ -462,6 +588,7 @@ p > a {
       text-shadow: 0 0 0.5rem #fff, 0 0 0.8rem #fff;
     }
   }
+
 
   .modalBox > h2, .close {
     font-size: 1.8vw;
@@ -559,6 +686,10 @@ p > a {
     height: 86%;
   }
 
+  .expand p, li {
+    font-size: 0.9rem;
+  }
+
   .modalBox {
     width: 16rem;
   }
@@ -602,4 +733,6 @@ p > a {
     margin: 5vw 0;
     font-size: 0.6rem;
   }
+
+  
 }
