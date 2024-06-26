@@ -21,30 +21,24 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
     var video = document.getElementById('blueVideo');
     var div = document.getElementById('phase3');
     var button = document.getElementById('bPhase3');
 
     video.addEventListener('loadeddata', function() {
-        // Ensure the video is ready to play
-        if (video.readyState >= 2) {
+        if (video.readyState >= 2) { // Ensures video is ready to be processed
             try {
                 var canvas = document.createElement('canvas');
-                canvas.width = 1;  // We only need the first pixel
-                canvas.height = 1;
-                var ctx = canvas.getContext('2d');
+                var context = canvas.getContext('2d');
+                canvas.width = video.videoWidth; // Set canvas size equal to video size
+                canvas.height = video.videoHeight;
+                context.drawImage(video, 0, 0, canvas.width, canvas.height); // Draw the video frame to canvas
 
-                // Draw the first frame of the video onto the canvas
-                ctx.drawImage(video, 0, 0, 1, 1);
-                var pixelData = ctx.getImageData(0, 0, 1, 1).data;
-
-                // Convert pixel data to an RGB CSS color
-                var color = 'rgb(' + pixelData[0] + ',' + pixelData[1] + ',' + pixelData[2] + ')';
-                console.log(color);
-                div.style.backgroundColor = color; // Set the background color of the div
+                var pixel = context.getImageData(10, 10, 1, 1).data; // Get the color of the pixel at (10, 10)
+                var color = `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`; // Convert pixel data to RGB
                 button.style.backgroundColor = color; // Set the background color of the button
+                div.style.backgroundColor = color; // Set the background color of the div
             } catch (e) {
                 console.error("Error extracting color: ", e);
             }
