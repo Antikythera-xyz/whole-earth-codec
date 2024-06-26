@@ -107,10 +107,12 @@ a:hover {
 h3 {
   font-family: Netbus;
   margin-top: 3rem;
+  font-weight: normal;
 }
 
 h4 {
   font-family: Netbus;
+  font-weight: normal;
 }
 
 ::selection {
